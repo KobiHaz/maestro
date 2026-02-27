@@ -1,0 +1,30 @@
+---
+description: Plan file lifecycle and mandatory documentation after execution
+alwaysApply: true
+---
+
+# Plan Lifecycle & Post-Execution Documentation
+
+## Plan Files: Do Not Persist
+
+- **During execution** — Plan can exist in `docs/plans/` for the session
+- **After execution completes** — Delete the plan file. No need to keep it.
+- **Action:** When all tasks in a plan are done and verified, delete `docs/plans/<plan-name>.md`
+
+## Mandatory Documentation (After Every Plan Execution)
+
+**Before considering execution "complete":**
+
+1. **Update or create documentation** for the changes made
+2. **If docs exist** — Update them (CHANGELOG, README, project brief in 02-projects, docs/)
+3. **If no docs exist** — Create documentation for the changes (at least: what was done, where, why)
+4. **Use** — 03-agents/workflows/document.md workflow (read it and follow)
+
+## Completion Checklist
+
+After executing a plan:
+
+- [ ] All tasks done and verified
+- [ ] Documentation updated or created for the changes
+- [ ] Plan file deleted from docs/plans/
+- [ ] Log entry in 07-logs/ if significant (per CLAUDE basic instructions)

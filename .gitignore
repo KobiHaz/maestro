@@ -1,0 +1,10 @@
+# macOS
+.DS_Store
+
+# Obsidian
+.obsidian/workspace.json
+*.sync-conflict*
+
+# Cursor
+.cursor/.cursoragent
+.cursor/*.log

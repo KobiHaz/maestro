@@ -1,0 +1,27 @@
+---
+description: Proactive agent selection - AI invokes the right agent automatically without user tagging
+alwaysApply: true
+---
+
+# Proactive Agent Routing
+
+**You MUST route to agents proactively.** The user should NOT have to tag agents.
+
+## Mandatory Flow (Every Task)
+
+1. **Read** — `03-agents/agent-routing.md` (especially the Trigger Matrix)
+2. **Scan** — User message + task for matching trigger keywords/phrases
+3. **Match** — Use the FIRST matching row in the Trigger Matrix (priority order)
+4. **Invoke** — Read `03-agents/<File column>.md` (e.g. specialists/debugger → 03-agents/specialists/debugger.md)
+5. **Execute** — Proceed as that agent. No `@agent-name` needed.
+
+## Decision Logic
+
+- **Trigger Matrix** in agent-routing.md defines exactly when each agent activates
+- **Keyword match** — If user/task contains any trigger from a row → that agent
+- **Priority** — When multiple match, use lower priority number (e.g. bug → debugger before frontend)
+- **No match** — General task: proceed with default behavior, or project-planner if it's a multi-step request
+
+## Rule
+
+**Never ask "would you like me to use X agent?".** If a trigger matches, invoke that agent. The Trigger Matrix is deterministic.
