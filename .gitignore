@@ -8,3 +8,6 @@
 # Cursor
 .cursor/.cursoragent
 .cursor/*.log
+
+# Local npm (scripts under 06-outputs — reinstall with npm install)
+06-outputs/node_modules/

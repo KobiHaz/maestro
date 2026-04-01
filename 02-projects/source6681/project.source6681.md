@@ -49,12 +49,16 @@ http://localhost:5173 | Admin: http://localhost:5173/admin
 
 ## eBay Setup
 
-1. [eBay Developer](https://developer.ebay.com/) → App ID, Cert ID
-2. Supabase Edge Functions Secrets: `EBAY_APP_ID`, `EBAY_CERT_ID`
+[[04-knowledge/reference/source6681-ebay-setup|eBay Setup]] — Developer Portal, Supabase secrets.
+
+## Recent (Mar 2026)
+
+- Recovery plan: Footer female form, text-direction removal, brand logos in ProductModal.
 
 ## Reference
 
-- [[04-knowledge/reference/source6681-architecture|Architecture & API]]
-- [[04-knowledge/reference/source6681-security-audit|Security audit]]
+- [[04-knowledge/reference/source6681-architecture|Architecture]]
+- [[04-knowledge/reference/source6681-api|API Reference]] — Edge Functions
+- [[04-knowledge/reference/source6681-vercel-setup|Vercel]]
+- [[04-knowledge/reference/source6681-action-plan|Action plan]] — משימות, אבטחה, עדיפויות
 - [[04-knowledge/standards/source6681-standards|Standards]]
-- Remaining tasks: `docs/plans/2026-02-27-source6681-remaining-tasks.md`

@@ -1,5 +1,6 @@
 # CMS — Cursor Rules & Standards
 
+> **Extends:** [[04-knowledge/standards/base-coding-standards|base-coding-standards]]. Load both.
 > Repo: cms. Read this for rules when working on CMS.
 
 ## Tech Stack
@@ -12,30 +13,21 @@
 
 | Domain | Pattern |
 |--------|---------|
-| **Data loading** | Normalize in loaders only; components receive camelCase |
 | **Payload** | `products: Product[]` + `productsWithSlots: ProductSlotRef[]` (IDs only) |
-| **Lookups** | `Map` for O(1); never `.find()` in loops |
 | **Vertical fallback** | NEVER fallback between verticals (goldira ↔ weightloss) |
 | **Defaults** | Zero tolerance — no fake content; return empty |
 | **Images** | Paths in Firestore; `getStorageUrl()` async in components |
 | **Firestore** | snake_case only; `smartNormalizeFromFirestore()` in loaders |
 
-## Naming
+*Data loading, lookups (Map O(1)) — see base sections 4, 5.*
 
-| Type | Pattern | Example |
-|------|---------|---------|
-| Components | PascalCase | `ProductCard.tsx` |
-| Hooks | `use` + PascalCase | `useComponentData.ts` |
-| Services | camelCase | `firestoreService.ts` |
-| Constants | SCREAMING_SNAKE | `CACHE_DURATION` |
-| Plan files | `YYYY-MM-DD-kebab.md` | `2026-02-27-cms-remaining-tasks.md` |
+## Naming (תוספות ל-base)
+
+*Components, hooks, services, constants — see base. Plan files — [[04-knowledge/standards/maestro-project-doc-lifecycle#4. תבנית שם תוכנית|maestro §4]].*
 
 ## Plan Lifecycle
 
-1. **On task completion** — Update docs in Obsidian (`04-knowledge/reference/cms-*.md`)
-2. **Completed plans** — Delete from `docs/plans/` (or move to archive)
-3. **Pending tasks** — Single file in `docs/plans/YYYY-MM-DD-cms-remaining-tasks.md` in vault
-4. **Before deleting Plan** — Ensure all relevant decisions have been moved to Reference
+[[04-knowledge/standards/maestro-project-doc-lifecycle]]
 
 ## Architecture
 

@@ -1,5 +1,6 @@
 # hadaryaCRM — Cursor Rules & Standards
 
+> **Extends:** [[04-knowledge/standards/base-coding-standards|base-coding-standards]]. Load both.
 > Repo: hadaryaCRM. Project/product name: Demo CRM. Read this for rules when working on hadaryaCRM.
 
 ## Tech Stack
@@ -13,15 +14,13 @@
 - **Security:** `escapeIlike()` for all ILIKE search inputs; `escapeHtml()` for user data in HTML (e.g. send-quote)
 - **Ad Agency:** Separate module at `src/pages/ad-agency/`, uses `useColumnVisibility`, `ColumnVisibilityDropdown`
 
-## Naming
+## Naming (תוספות ל-base)
 
 | Type | Pattern | Example |
 |------|---------|---------|
-| Component files | PascalCase | `EntityPageShell.tsx`, `LeadKanban.tsx` |
-| Hooks | `use` + PascalCase | `useColumnVisibility.ts`, `useTablePreferences.ts` |
-| Lib / utils | camelCase | `escapeIlike.ts` |
 | Folders | kebab-case | `entity-page`, `ad-agency`, `data-table` |
-| Plan files | `YYYY-MM-DD-kebab-description.md` | `2025-02-23-modular-permissions-implementation.md` |
+
+*Plan files — [[04-knowledge/standards/maestro-project-doc-lifecycle#4. תבנית שם תוכנית|maestro §4]].*
 
 ## Architecture
 
@@ -36,11 +35,7 @@
 
 ## Plan Lifecycle
 
-**Whenever you complete a task or plan:**
-
-1. Update the relevant docs — Obsidian `02-projects/hadaryaCRM`, `04-knowledge/reference/hadaryaCRM-architecture.md`
-2. Suggest deleting the old work plan from `docs/plans/` if it has been fully implemented
-3. Don't delete plans yourself — suggest deletion and let the user approve
+[[04-knowledge/standards/maestro-project-doc-lifecycle]]. **hadaryaCRM:** לא למחוק תוכניות בעצמך — להציע מחיקה ולאשר עם המשתמש.
 
 ## Reference
 

@@ -9,6 +9,15 @@ $ARGUMENTS
 
 ---
 
+## Place in the supply cycle
+
+- **Stage:** **3 (special) — new application** — still needs product spec/direction before full build; usually after `brainstorm` and/or PRD in `workflows/plan.md` or explicit user decision.
+- **Before:** like a large feature — prefer a short spec; **`/plan`** (`workflows/plan.md`) before or as part of the process (see steps below).
+- **After:** same path as normal execution — tests, documentation, review, finishing-branch (see [[agent-routing]]).
+- **Staffing:** specialists (DB, backend, frontend, …) from [[agent-routing]] per chosen stack and plan.
+
+---
+
 ## Task
 
 **Tools in vault:** `03-agents/`, `04-knowledge/`. Preview from `03-agents/scripts/` if present. Otherwise: `npm run dev`, project brief from `02-projects/[project]/`.
@@ -22,7 +31,7 @@ This command starts a new application creation process.
    - If information is missing, use `conversation-manager` skill to ask
 
 2. **Project Planning**
-   - Use `project-planner` from `03-agents/core/project-planner.md` for task breakdown
+   - Use **`/plan`** / `03-agents/workflows/plan.md` for task breakdown
    - Determine tech stack
    - Plan file structure
    - Create plan file and proceed to building

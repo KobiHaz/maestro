@@ -1,23 +1,22 @@
 # source6681 — Docs Index
 
-> **Source of truth:** Vault (Obsidian). The project is minimal.
+> **מקור אמת:** Maestro כספת.
 
-## Reference (vault)
+## Reference
 
 | Doc | Path |
 |-----|------|
+| **Action plan** | [[04-knowledge/reference/source6681-action-plan]] — משימות, עדיפויות, אבטחה |
 | Architecture & API | [[04-knowledge/reference/source6681-architecture]] |
-| Security audit | [[04-knowledge/reference/source6681-security-audit]] |
+| Vercel | [[04-knowledge/reference/source6681-vercel-setup]] |
 | Standards | [[04-knowledge/standards/source6681-standards]] |
 
 ## Project Brief
 
 [[project.source6681]] — How to run, scripts, key dirs.
 
-## Plans
+## Plans & Tasks
 
-| File | Purpose |
-|------|---------|
-| [[docs/plans/2026-02-27-source6681-remaining-tasks]] | Pending tasks (Vercel, UX, performance) |
+[[04-knowledge/reference/source6681-action-plan|source6681-action-plan]] — מקור יחיד. [[02-projects/source6681/plans-and-tasks|plans-and-tasks]] → אינדקס.
 
 [[../project.source6681|← Back to project brief]]

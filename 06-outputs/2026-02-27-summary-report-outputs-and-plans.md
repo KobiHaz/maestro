@@ -8,15 +8,16 @@
 
 ## 1. Document Inventory
 
-### 06-outputs/ (5 files)
+### 06-outputs/ (4 files — מצב נכון ל־2026-02-27)
 
 | File | Type | Purpose |
 |------|------|---------|
 | 2026-02-26-docs-audit-report.md | Audit | Documentation quality across 6 projects (cms, hadaryaCRM, proposal-generator, smart-volume-radar, website, source6681) |
 | 2026-02-26-vault-pkm-analysis.md | Analysis | PKM best practices, vault structure strengths/weaknesses, migration roadmap |
-| 2026-02-26-rules-audit-report.md | Audit | Rules, agents, workflows — what applies per project; project-specific vs generic content |
 | 2026-02-26-project-docs-inventory.md | Inventory | Key docs per project relevant for vault management (02-projects) |
 | README.md | Meta | Naming convention: `YYYY-MM-DD-description.md` |
+
+> *הערה (2026-04-01):* `2026-02-26-rules-audit-report.md` הוסר — טבלאות סוכנים ישנות; מקור אמת לקטלוג: `03-agents/agent-routing.md`.
 
 ### docs/plans/ (3 files)
 

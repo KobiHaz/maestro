@@ -1,8 +1,15 @@
 # hadaryaCRM — Pending Tasks
 
-> Consolidated plan from all previous plans. Source: implementation-status, tech-stack-quick-wins, ui-ux-improvements.
+> Consolidated plan from all previous plans. Source: implementation-status, tech-stack-quick-wins, ui-ux-improvements, 2026-03-01 comprehensive audit.
 
-**Date:** 27 February 2026
+**Date:** 27 February 2026 — Last synced: 2 March 2026
+
+---
+
+## הושלם (Completed)
+
+- **מרץ 2026:** send-quote → user_module_roles; payment-proofs bucket + RLS; Dynamic import ExcelJS; catch handleExportExcel; DashboardContext useCallback/useMemo; loading lazy + dimensions
+- **מרץ 2026 (Audit Phase 1–4):** credentials→env, Zod send-quote, CORS restrict, npm audit fix, route guard ad-agency, query-keys.ts, data-flow sections, React.memo Cards, Vitest + escapeIlike tests, vercel.json headers, Sentry defer, manualChunks, leads-refactor (Leads.tsx split)
 
 ---
 
@@ -29,9 +36,9 @@
 
 ## Phase 4: Performance
 
-| ID | Task |
-|----|------|
-| 11 | Lazy-load exportBudgetToExcel |
+| ID | Task | Status |
+|----|------|--------|
+| 11 | Lazy-load exportBudgetToExcel | ✓ Done (ExcelJS dynamic import) |
 
 ---
 
@@ -87,10 +94,29 @@
 
 ---
 
+## Audit — Still Open (from 2026-03-01)
+
+| # | Area | Action |
+|---|------|--------|
+| P0.4 | Quality | Enable TypeScript strict (or gradual) |
+| P2.12 | Performance | DB indexes for op_*, deals |
+| P2.16 | Quality | README; JSDoc for hooks |
+| P3 | Low | ROUTE_MAP Ad Agency, remove EntityKanbanColumn, extend Zod, A11y audit |
+
+---
+
 ## Recommended priority order
 
 1. **Critical:** A11 (types) if there are type issues
 2. **Quick:** Tech Stack 1–3 (debounce, maestro config)
 3. **Code improvement:** Phase 3 (8, 9, 10)
-4. **Performance:** Phase 4 (11)
-5. **Design:** Phase 5 + UI/UX as needed
+4. **Design:** Phase 5 + UI/UX as needed
+5. **Audit open:** TypeScript strict, DB indexes, README/JSDoc
+
+---
+
+## קישורים
+
+- **Hub:** [[02-projects/hadaryaCRM/README]]
+- **דוח ביקורת:** [[06-outputs/2026-03-01-hadaryaCRM-comprehensive-audit]]
+- **Standards:** [[04-knowledge/standards/hadaryaCRM-standards]]

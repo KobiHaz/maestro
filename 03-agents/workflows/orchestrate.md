@@ -7,6 +7,15 @@ description: Coordinate multiple agents for complex tasks. Use for multi-perspec
 
 You are now in **ORCHESTRATION MODE**. Your task: coordinate specialized agents to solve this complex problem.
 
+**Maestro routing:** This workflow is the vault’s structured multi-agent path alongside [[agent-routing]] — orchestrate and invoke specialists from `03-agents/`; do not substitute their domain work. **Orchestrator persona** is embedded in `agent-routing.md` (there is no `core/orchestrator.md`).
+
+## Place in the supply cycle
+
+- **Stage:** **Coordination** (often parallel) — not a substitute for specification, task planning, or line-by-line `/execute`.
+- **Before:** plan in `docs/plans/{slug}.md` or create it in phase 1 of this protocol (**`workflows/plan.md`** / `project-planner` only + sometimes `explorer-agent`).
+- **After:** synthesis → continue per plan (usually **`/execute`** or another coordination round). Minimum **3 distinct agents** — otherwise it is not orchestration.
+- **Staffing:** every agent from [[agent-routing]] and per plan staffing.
+
 ## Task to Orchestrate
 $ARGUMENTS
 
@@ -43,7 +52,7 @@ Verification uses agents from `03-agents/specialists/` and scripts from `03-agen
 | **API** | backend-specialist, security-auditor, test-engineer |
 | **UI/Design** | frontend-specialist, seo-specialist, performance-optimizer |
 | **Database** | database-architect, backend-specialist, security-auditor |
-| **Full Stack** | project-planner, frontend-specialist, backend-specialist, devops-engineer |
+| **Full Stack** | `workflows/plan.md` (project-planner), frontend-specialist, backend-specialist, devops-engineer |
 | **Debug** | debugger, explorer-agent, test-engineer |
 | **Security** | security-auditor, penetration-tester, devops-engineer |
 
@@ -66,17 +75,17 @@ Verification uses agents from `03-agents/specialists/` and scripts from `03-agen
 
 | Step | Agent | Action |
 |------|-------|--------|
-| 1 | `project-planner` | Create docs/PLAN.md |
+| 1 | `project-planner` (`03-agents/workflows/plan.md`) | Create `docs/plans/{task-slug}.md` (same convention as [[workflows/plan]]) |
 | 2 | (optional) `explorer-agent` | Codebase discovery if needed |
 
-> 🔴 **NO OTHER AGENTS during planning!** Only project-planner and explorer-agent.
+> 🔴 **NO OTHER AGENTS during planning!** Only **`workflows/plan.md`** (project-planner) and explorer-agent.
 
 ### ⏸️ CHECKPOINT: User Approval
 
 ```
-After PLAN.md is complete, ASK:
+After `docs/plans/{task-slug}.md` is complete (see [[workflows/plan]]), ASK:
 
-"Plan created: docs/PLAN.md
+"Plan created: docs/plans/<slug>.md
 
 Approve plan? (Y/N)
 - Y: Implementation starts
@@ -99,7 +108,7 @@ Approve plan? (Y/N)
 
 | Agent | Domain | Use When |
 |-------|--------|----------|
-| `project-planner` | Planning | Task breakdown, PLAN.md |
+| `project-planner` | Planning | Task breakdown, `docs/plans/*.md` — file: `03-agents/workflows/plan.md` |
 | `explorer-agent` | Discovery | Codebase mapping |
 | `frontend-specialist` | UI/UX | React, Vue, CSS, HTML |
 | `backend-specialist` | Server | API, Node.js, Python |
@@ -131,21 +140,21 @@ Identify ALL domains this task touches:
 □ Mobile       → mobile-developer
 □ Performance  → performance-optimizer
 □ SEO          → seo-specialist
-□ Planning     → project-planner
+□ Planning     → `workflows/plan.md` (project-planner)
 ```
 
 ### Step 2: Phase Detection
 
 | If Plan Exists | Action |
 |----------------|--------|
-| NO `docs/PLAN.md` | → Go to PHASE 1 (planning only) |
-| YES `docs/PLAN.md` + user approved | → Go to PHASE 2 (implementation) |
+| NO `docs/plans/{slug}.md` | → Go to PHASE 1 (planning only) |
+| YES `docs/plans/{slug}.md` + user approved | → Go to PHASE 2 (implementation) |
 
 ### Step 3: Execute Based on Phase
 
 **PHASE 1 (Planning):**
 ```
-Use the project-planner agent to create PLAN.md
+Use **`/plan`** / `03-agents/workflows/plan.md` (project-planner) to create the plan file
 → STOP after plan is created
 → ASK user for approval
 ```
@@ -169,7 +178,7 @@ When invoking ANY subagent, you MUST include:
 
 **Example with FULL context:**
 ```
-Use the project-planner agent to create PLAN.md:
+Use **`/plan`** / `03-agents/workflows/plan.md` (project-planner) to create the plan file:
 
 **CONTEXT:**
 - User Request: "Öğrenciler için sosyal platform, mock data ile"
@@ -177,7 +186,7 @@ Use the project-planner agent to create PLAN.md:
 - Previous Work: Orchestrator asked 6 questions, user chose all options
 - Current Plan: docs/plans/dashboard-analytics.md exists with initial structure
 
-**TASK:** Create detailed PLAN.md based on ABOVE decisions. Do NOT infer from folder name.
+**TASK:** Create detailed `docs/plans/{task-slug}.md` per [[workflows/plan]] based on ABOVE decisions. Do NOT infer from folder name.
 ```
 
 > ⚠️ **VIOLATION:** Invoking subagent without full context = subagent will make wrong assumptions!
@@ -218,7 +227,7 @@ Combine all agent outputs into unified report.
 ### Agents Invoked (MINIMUM 3)
 | # | Agent | Focus Area | Status |
 |---|-------|------------|--------|
-| 1 | project-planner | Task breakdown | ✅ |
+| 1 | project-planner (`workflows/plan.md`) | Task breakdown | ✅ |
 | 2 | frontend-specialist | UI implementation | ✅ |
 | 3 | test-engineer | Verification scripts | ✅ |
 
@@ -233,7 +242,7 @@ Combine all agent outputs into unified report.
 3. **[Agent 3]**: Finding
 
 ### Deliverables
-- [ ] PLAN.md created
+- [ ] `docs/plans/{slug}.md` created
 - [ ] Code implemented
 - [ ] Tests passing
 - [ ] security-auditor verification

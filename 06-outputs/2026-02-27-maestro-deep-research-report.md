@@ -4,6 +4,8 @@
 > **Type:** Research, analysis, recommendations  
 > **Goal:** In-depth study of the Maestro project as an agent infrastructure, identifying strengths, gaps, questions, and recommendations for optimal workflow
 
+> **Update 2026-04-01:** Sections **5.5** and **5.6** below were superseded — planning is unified under `/plan` + `project-planner` (no separate `create-plan` workflow). For current counts and workflows see `03-agents/agent-routing.md`.
+
 ---
 
 ## 1. Executive Summary
@@ -60,10 +62,7 @@ The infrastructure is suitable as a base for any project — but there are gaps 
 
 ### 3.3 Workflows
 
-6. **create-plan vs project-planner:**
-   - `create-plan` = plan with 🟩🟨🟥
-   - `project-planner` = PLAN.md + task breakdown + agent assignment
-   - Are the two complementary or overlapping? When to use which?
+6. **~~create-plan vs project-planner~~** *(resolved 2026-04-01):* Single path — `/plan` + `project-planner`; plans include 🟩🟨🟥 and Overall Progress.
 
 7. **docs/plans vs docs/plans:**
    - `plan-lifecycle` says: delete plan after execution
@@ -107,7 +106,7 @@ The infrastructure is suitable as a base for any project — but there are gaps 
 
 ### 4.4 Workflow Order
 
-- `/plan` → project-planner? or create-plan?
+- `/plan` → project-planner (unified; no separate create-plan)
 - `/execute` → after `/plan`? What's the relation to orchestrate?
 - Is `/orchestrate` = plan + execute + 3+ agents combined?
 
@@ -156,17 +155,13 @@ The infrastructure is suitable as a base for any project — but there are gaps 
 - Update project-planner: `docs/plans/{task-slug}.md` or `./docs/plans/{task-slug}.md` (relative to project)
 - Clear docs: vault plans = general planning; project plans = code planning
 
-### 5.5 create-plan vs project-planner
+### 5.5 create-plan vs project-planner *(superseded 2026-04-01)*
 
-**Recommendation:**
-- **project-planner** = complex planning, task breakdown, agent assignment, PLAN.md
-- **create-plan** = light planning, 🟩🟨🟥, no agent assignment
-- In agent-routing: clarify when each — e.g. "create-plan" for "simple task with clear steps"
+**Resolved:** Single planning path — **`workflows/plan.md`** (`/plan`, `/prd`; merged 2026-04-01). Plan artifacts use 🟩🟨🟥 and **Overall Progress**. The standalone `create-plan` workflow file was removed.
 
 ### 5.6 Frontmatter in Workflows
 
-**Status:** Previous reports noted missing `name` — now in document.md, execute.md, orchestrate.md etc. — `name` exists.  
-**Check:** Ensure all 17 workflows include `name` in frontmatter.
+**Status:** Most workflows include `name` in frontmatter; verify any new files against `agent-routing.md`. Current workflow set: 17 (including `prd`, `project-deep-audit`; `preview` merged into `status`).
 
 ---
 

@@ -1,9 +1,9 @@
 ---
 name: status
-description: Display agent and project status. Progress tracking and status board.
+description: Project / agent status, file stats, and dev server (merged former /preview).
 ---
 
-# /status - Show Status
+# /status — Project state and dev server
 
 $ARGUMENTS
 
@@ -11,75 +11,70 @@ $ARGUMENTS
 
 ## Task
 
-Show current project and agent status.
+Report **project context**, **work board** (if inferable), **file activity**, and **local dev server** state.
 
-### What It Shows
+Sub-commands (optional first token after `/status`):
 
-1. **Project Info**
-   - Project name and path
-   - Tech stack
-   - Current features
+```
+/status              — Full status (project + agents + files + dev server)
+/status preview      — Same as bare /status for dev URL/health (legacy alias)
+/status start        — Start dev server (npm run dev / pnpm dev / project script)
+/status stop         — Stop dev server (if you manage the process)
+/status restart      — Restart dev server
+/status check        — Health check only (URL responding)
+```
 
-2. **Agent Status Board**
-   - Which agents are running
-   - Which tasks are completed
-   - Pending work
-
-3. **File Statistics**
-   - Files created count
-   - Files modified count
-
-4. **Preview Status**
-   - Is server running
-   - URL
-   - Health check
+If `$ARGUMENTS` is empty, run the **full** status. If it starts with `start|stop|restart|check|preview`, handle **dev server** as in the former `/preview` workflow.
 
 ---
 
-## Example Output
+### What full status includes
+
+1. **Project**
+   - Name, path, type/stack from `02-projects/[project]/` or repo README
+2. **Agent / task board** (when plan or chat context exists)
+   - Completed vs in-progress vs pending (from `docs/plans/*` or narrative)
+3. **Files**
+   - Rough created/modified counts if inferable from git
+4. **Dev server**
+   - Running or not, URL, simple health note
+
+---
+
+## Example output
 
 ```
 === Project Status ===
 
 📁 Project: my-ecommerce
-📂 Path: C:/projects/my-ecommerce
+📂 Path: …/my-ecommerce
 🏷️ Type: nextjs-ecommerce
-📊 Status: active
 
-🔧 Tech Stack:
-   Framework: next.js
-   Database: postgresql
-   Auth: clerk
-   Payment: stripe
+🔧 Tech Stack: next.js, postgresql, clerk, …
 
-✅ Features (5):
-   • product-listing
-   • cart
-   • checkout
-   • user-auth
-   • order-history
+✅ Features / milestones: …
+⏳ Pending: …
 
-⏳ Pending (2):
-   • admin-panel
-   • email-notifications
+📄 Files: N created, M modified (from git)
 
-📄 Files: 73 created, 12 modified
+=== Agent / plan ===
 
-=== Agent Status ===
+(From active docs/plans/*.md or session context)
 
-✅ database-architect → Completed
-✅ backend-specialist → Completed
-🔄 frontend-specialist → Dashboard components (60%)
-⏳ test-engineer → Waiting
-
-=== Preview ===
+=== Dev server ===
 
 🌐 URL: http://localhost:3000
 💚 Health: OK
 ```
 
+### Port conflict (on start)
+
+If port in use, offer: alternate port, kill process, or user choice — same behavior as legacy `/preview start`.
+
 ---
 
 ## Technical
 
-**Tools in vault:** Status scripts from `03-agents/scripts/` if present (session_manager, auto_preview). Otherwise: tech stack from `02-projects/[project]/`, dev server via `npm run dev`.
+**Tools in vault:** `03-agents/scripts/` if present (`session_manager`, `auto_preview`). Otherwise: `02-projects/` brief, `npm run dev` / `pnpm dev` / `yarn dev` per project.
+
+**Note:** `/preview` was **merged here** — use `/status` or `/status start` / `/status check`.

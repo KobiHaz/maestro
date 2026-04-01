@@ -139,6 +139,7 @@ For exact formulas and verification, see [[04-knowledge/reference/smart-volume-r
 - **pctFromAth** = (price − ATH) ÷ ATH × 100
 - **monthsInConsolidation** = trading days since last ATH touch ÷ 21
 - **nearSMA21, nearAth, inConsolidationWindow** = comparisons vs thresholds above
+- **Setup (🎯/👀)** = RVOL ≥ minRVOL + above conditions (see calculations)
 
 ---
 
@@ -155,7 +156,7 @@ For exact formulas and verification, see [[04-knowledge/reference/smart-volume-r
 
 ## 9. Tips
 
-- **🎯** – Stocks that meet all consolidation criteria are ranked higher when RVOL is similar.
+- **🎯** – Full setup: RVOL ≥ minRVOL + near SMA21 + near ATH + base in 6–36mo window.
 - **Silent Activity** – High volume with little price change can mean accumulation or distribution.
 - Stocks with `.TA` suffix are Israeli (TASE); news links go to BizPortal.
 - Long reports are split into multiple Telegram messages (max 4096 chars per message).

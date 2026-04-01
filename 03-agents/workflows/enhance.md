@@ -15,6 +15,15 @@ $ARGUMENTS
 
 This command adds features or makes updates to existing application.
 
+### Not duplicate of `/execute`
+
+| | **`/enhance` (this workflow)** | **`/execute`** (`workflows/execute.md`) |
+|--|-------------------------------|----------------------------------------|
+| **Trigger** | Natural-language feature request | Next 🟥 step in **`docs/plans/*.md`** |
+| **Tracking** | Light (optional user confirmation before big diffs) | Mandatory emoji progress + lifecycle checklist |
+
+If you already have a staffed plan in `docs/plans/`, **prefer `/execute`**. Use **`/enhance`** for small or exploratory changes without a plan file.
+
 ### Steps:
 
 1. **Understand Current State**

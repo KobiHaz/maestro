@@ -9,6 +9,16 @@ $ARGUMENTS
 
 ---
 
+## Place in the supply cycle
+
+- **Stage:** **4 — Testing** (run, author tests, coverage).
+- **Before / in parallel:** **`/execute`** — verification commands must run before claiming done; **`/test`** extends (file/feature, coverage, watch).
+- **After:** when tests are green — **`/document`**; specialist: `test-engineer` per plan or explicit request.
+- **Staffing:** `test-engineer` is listed in [[agent-routing]]; in plans — path `03-agents/specialists/test-engineer.md`.
+- **CTO (optional):** for **high-sensitivity** changes — **CTO persona** section in `03-agents/workflows/brainstorm.md` for **test strategy** (what needs e2e, contract tests, what stays manual) — do **not** replace `test-engineer` for writing tests. If it appears in the plan — follow `agent_path` in `docs/plans/*`.
+
+---
+
 ## Purpose
 
 This command generates tests, runs existing tests, or checks test coverage.

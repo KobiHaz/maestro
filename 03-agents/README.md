@@ -6,23 +6,36 @@
 
 | Folder | Content |
 |--------|---------|
-| `core/` | orchestrator, cto, project-planner, create-plan |
-| `specialists/` | 14 specialists (frontend, backend, security, test, debug, seo, ...) |
+| `core/` | Reserved for future persistent personas. **Planning + PRD** — `workflows/plan.md` (`/plan`, `/prd`). **Orchestrator** + staffing catalog — `agent-routing.md`. **CTO** — `workflows/brainstorm.md`. |
+| `specialists/` | 17 domain experts (including `ui-ux-specialist`, `technical-educator`, frontend, backend, …) |
+| `games/` | game-developer + index (archive — optional for now) |
 | `content/` | gold-ira-seo-content-writer |
-| `workflows/` | orchestrate, brainstorm, plan, create, debug, deploy, document, execute, review, ... |
-| `skills/` | scripts (security_scan, lint_runner, compliance_checker, etc.) when present |
+| `workflows/` | Mode workflows (`/execute`, `/plan`, …); supply cycle summarized in [[agent-routing]] and detailed per file under *Place in the supply cycle* |
+| `skills/` | Markdown skills + scripts — index: [[skills/README]] |
+
+## Vault skills vs Cursor skills
+
+| Layer | Where | When it applies |
+|-------|--------|-----------------|
+| **Vault skills** | `03-agents/skills/` (this repo) | Human + model read these in Obsidian/Cursor when working **in or from the Maestro vault**; agents reference them by path in prompts. |
+| **Cursor / plugin skills** | e.g. `~/.cursor/skills`, bundled plugin `SKILL.md` files | Injected by Cursor rules/hooks when you edit matching paths or run matching commands — **not** the same files as the vault. |
+
+Do not duplicate long checklists in both places. Prefer vault skills for Maestro-specific procedures; use Cursor skills for IDE/tooling automation.
 
 ## How to Use
 
 **Workspace = Maestro vault.** Cursor opens on vault. Project code accessed from project paths.
 - CLAUDE.md → rules from 01-me, 02-projects, **03-agents**, 04-knowledge
-- Before a task: check `agent-routing.md` — which agent to invoke
+- Before a task: check `agent-routing.md` — which agent to invoke + [[04-knowledge/standards/maestro-project-doc-lifecycle|Project Rules]]
 - Agents in `specialists/`, scripts in `skills/`, knowledge in `04-knowledge/`
 
 ## Key Links
 
 - [[agent-routing]] — route tasks to the right agent
-- [[AGENT-TEMPLATE]] — template for new agents
+- [[games/README]] — games hub (archive)
+- [[AGENT-TEMPLATE]] — template for new agents; **all** `specialists/*.md` and [[workflows/plan]] include the same **Maestro contract** sections (Role → Stop) for a uniform standard
+- [[skills/README]] — skills index by domain
+- [[skill-template]] — template for new skills (in skills/)
 - `04-knowledge/` — research, guidelines, patterns
 
 ## Updates

@@ -242,3 +242,20 @@ nearSMA21Close = (NOT nearSMA21) AND (pctDiff <= sma21CloseThresholdPct)
 | CONSOLIDATION_CLOSE_MIN_MONTHS | 4       | inConsolidationClose   |
 | TRADING_DAYS_PER_MONTH (code)  | 21      | monthsInConsolidation  |
 | Period high "touch" (code)     | 0.98    | monthsInConsolidation (2%) |
+| MIN_RVOL                       | 2.0     | Setup (Full/Close)     |
+
+---
+
+## Setup Criteria (🎯 Full / 👀 Close)
+
+**Full Setup (🎯):**
+```
+RVOL ≥ minRVOL  AND  nearSMA21  AND  nearAth  AND  inConsolidationWindow
+```
+
+**Close Setup (👀):**
+```
+RVOL ≥ minRVOL  AND  (nearSMA21 OR nearSMA21Close)  AND  (nearAth OR nearAthClose)  AND  (inConsolidationWindow OR inConsolidationClose)
+```
+
+**Source:** `src/utils/setup.ts` — `isFullSetup`, `isCloseSetup`

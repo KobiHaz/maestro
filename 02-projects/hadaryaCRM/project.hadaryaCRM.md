@@ -26,6 +26,8 @@ git clone <URL> && cd hadaryaCRM && npm i && npm run dev
 Active development.
 
 ## Decisions
+- **13.3.2026** — Gemini UX Audit: Sprints 1–3 complete (scroll fixes, sticky columns, tab badges, RTL). See 06-outputs/2026-03-13-gemini-ux-audit-xsheva-crm.md
+
 ## Docs
 See [[02-projects/hadaryaCRM/README|hadaryaCRM docs index]] — UI-UX plan, security audit, Cursor MCP, plans.
 
