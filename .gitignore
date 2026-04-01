@@ -4,6 +4,8 @@
 # Obsidian
 .obsidian/workspace.json
 *.sync-conflict*
+# Local REST API stores API key + TLS private key — never commit
+.obsidian/plugins/obsidian-local-rest-api/data.json
 
 # Cursor
 .cursor/.cursoragent
