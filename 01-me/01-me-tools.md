@@ -2,7 +2,7 @@
 
 Context for AI assistants and development workflows.
 
-## Tech Stack (hadaryaCRM & similar projects)
+## Tech Stack (CRM & similar projects)
 
 - **Frontend:** React, TypeScript, Vite, Tailwind CSS, shadcn/ui
 - **Backend / DB:** Supabase (PostgreSQL, Auth, Storage) or Firebase
@@ -11,15 +11,16 @@ Context for AI assistants and development workflows.
 
 ## Business Tools
 
-- Custom CRM (hadaryaCRM)
+- Custom CRM
 - Quote and proposal submission system
 - Affiliate agreement builder
 - Google Analytics
 
 ## AI & Development
 
-- **IDE:** Cursor
-- **AI tools:** Gemini, Perplexity, Comet
+- **IDE:** Cursor, Claude Code (primary for agent/vault work)
+- **AI tools:** Claude Code, Gemini, Perplexity, Comet
+- **Knowledge management:** Obsidian (Maestro vault — second brain לכל הפרויקטים)
 
 ## Workflow Preferences
 

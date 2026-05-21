@@ -14,7 +14,7 @@ Project-specific reference docs. One folder, no subfolders.
 | Project | Ref files |
 |---------|-----------|
 | smart-volume-radar | 5 |
-| hadaryaCRM | 4 |
+| crm | 4 |
 | source6681 | 5 |
 | cms | 6 |
 | proposal-generator | 1 |

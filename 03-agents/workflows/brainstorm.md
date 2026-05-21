@@ -1,6 +1,6 @@
 ---
 name: brainstorm
-description: /brainstorm (options) + embedded CTO persona; PRD section in workflows/plan.md.
+description: /brainstorm (options) + embedded CTO persona; when @-referenced for a new idea/feature, default entry to the full supply cycle (PRD → plan → execute → … per agent-routing). PRD lives in workflows/plan.md.
 ---
 
 # /brainstorm — Specification + CTO persona (same file)
@@ -12,6 +12,18 @@ description: /brainstorm (options) + embedded CTO persona; PRD section in workfl
 | **`/prd`** | **Not here** — PRD section in `03-agents/workflows/plan.md` |
 
 $ARGUMENTS
+
+---
+
+## When this file is @-mentioned (`@03-agents/workflows/brainstorm.md`)
+
+**Default (new idea, feature, or material change):** This path is the **entry** to the full workflow — **not** a stop after option exploration.
+
+1. **Unless** the user explicitly asks for **brainstorm-only**, **options only**, or **no PRD**, continue the **full supply cycle** after Part A (and Part B CTO when technical decisions or the plan require it). Canonical order: **[[agent-routing]]** — *brainstorm → (optional CTO) → PRD → `/plan` → `/execute` → `/test` as needed → `/document` → `/review` → `/finishing-branch`*.
+2. **Same thread:** After delivering the Part A output (and CTO pass if applicable), **proceed** to the PRD section in `03-agents/workflows/plan.md` (`/prd`), then task planning in the same file (`/plan` → `docs/plans/{slug}.md`), then `03-agents/workflows/execute.md`. Do not treat the task as finished at “Recommendation” unless the user scoped it to exploration only.
+3. **Prerequisites:** Read the project brief under `02-projects/<project>/` when the work is project-specific; keep `plans-and-tasks.md` and ephemeral `docs/plans/*` aligned with [[04-knowledge/standards/maestro-project-doc-lifecycle]].
+
+**Explicit short-circuit:** If the user only wants ideation, they should say so (e.g. “brainstorm only”); then Part A (+ optional short CTO suggestion) is enough.
 
 ---
 

@@ -14,8 +14,8 @@ Entry point for ideas, links, quick notes. **Tasks and items by project.**
 
 ---
 
-## hadaryaCRM
-*[[project.hadaryaCRM]]*
+## CRM
+See 02-projects/crm/project.crm.md
 
 - [ ] 
 

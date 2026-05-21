@@ -1,0 +1,6 @@
+name: Maestro
+local: /Users/kobihazout/Library/Mobile Documents/iCloud~md~obsidian/Documents/Maestro
+remote: https://github.com/KobiHaz/maestro.git
+source: both
+branch: main
+description: Personal knowledge vault - Obsidian

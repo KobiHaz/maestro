@@ -4,7 +4,7 @@ Standards, reference, and research.
 
 | Subfolder | Use |
 |-----------|-----|
-| standards/ | How to write code — base-coding-standards (all) + project-specific (hadaryaCRM, source6681, etc.) |
+| standards/ | How to write code — base-coding-standards (all) + project-specific (crm, source6681, etc.) |
 | reference/ | What the code does — architecture, always up to date |
 
 Before new research — check if the information already exists here.

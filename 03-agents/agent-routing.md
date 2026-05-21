@@ -83,6 +83,7 @@ Details: [[04-knowledge/standards/maestro-project-doc-lifecycle]]
 | 2 | bug, error, crash, not working, broken, investigate, fix, debug | debugger | specialists/debugger |
 | 3 | deploy, production, server, pm2, ssh, release, rollback, ci/cd | devops-engineer | specialists/devops-engineer |
 | 4 | pentest, exploit, attack, hack, breach, pwn, redteam, offensive | penetration-tester | specialists/penetration-tester |
+| 5 | invariant sentinel, engineering invariants, security drift, daily invariant, invariant check | invariant-sentinel | workflows/invariant-sentinel |
 | 5 | security, vulnerability, owasp, xss, injection, encrypt, supply chain, security audit | security-auditor | specialists/security-auditor |
 | 6 | comprehensive audit, full project review, project audit, activate all agents, deep research; Hebrew: מחקר מעמיק, סקירה מקיפה, הפעיל את הכל | project-deep-audit | workflows/project-deep-audit |
 | 7 | mobile, react native, flutter, ios, android, app store, expo | mobile-developer | specialists/mobile-developer |
@@ -99,6 +100,7 @@ Details: [[04-knowledge/standards/maestro-project-doc-lifecycle]]
 | 18 | architecture, stack, tech decisions, cto | cto (persona in brainstorm) | workflows/brainstorm → **CTO persona** |
 | 19 | plan, /plan, breakdown, tasks, project planning, PLAN.md, execution plan, 🟩🟨🟥, create plan; Hebrew: תכנון, תוכנית עבודה | plan → project-planner | workflows/plan |
 | 20 | orchestrate, multi-agent, 3+ agents, coordination | orchestrator | agent-routing (Orchestrator persona) |
+| 20 | agent teams, competing hypotheses, parallel sessions, teammates, agents debate, agents talk to each other | agent-teams | workflows/orchestrate.md → **Agent Teams section** |
 | 21 | brainstorm, explore options, design exploration | brainstorm | workflows/brainstorm |
 | 22 | /document, update docs, documentation (post-execution) | document | workflows/document |
 | 23 | /execute, implement plan | execute | workflows/execute — **After completion:** plan-lifecycle checklist |
@@ -201,6 +203,7 @@ Details: [[04-knowledge/standards/maestro-project-doc-lifecycle]]
 | peer-review | `03-agents/workflows/peer-review.md` | Synthesize feedback from another model |
 | document | `03-agents/workflows/document.md` | `/document` after execution |
 | compliance | `03-agents/workflows/compliance.md` | `/compliance` — route to `compliance-auditor` |
+| invariant-sentinel | `03-agents/workflows/invariant-sentinel.md` | `/invariant-sentinel` — scheduled or on-demand invariant / drift checks (security & compliance properties) |
 | finishing-branch | `03-agents/workflows/finishing-branch.md` | Branch close-out, PR, merge |
 
 ---
@@ -230,6 +233,7 @@ Details: [[04-knowledge/standards/maestro-project-doc-lifecycle]]
 | Full project audit | project-deep-audit → `06-outputs/` |
 | Bug | debugger → test-engineer (regression) |
 | Security | security-auditor → (optional) penetration-tester |
+| Engineering invariants / drift | invariant-sentinel → security-auditor on failures |
 | Gold IRA content | gold-ira-seo-content-writer |
 | Deploy | devops-engineer → **deploy** workflow |
 

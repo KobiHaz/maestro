@@ -32,6 +32,7 @@ Do not duplicate long checklists in both places. Prefer vault skills for Maestro
 ## Key Links
 
 - [[agent-routing]] — route tasks to the right agent
+- [[workflows/invariant-sentinel]] — engineering invariant / drift monitoring (vault + Cursor Automations)
 - [[games/README]] — games hub (archive)
 - [[AGENT-TEMPLATE]] — template for new agents; **all** `specialists/*.md` and [[workflows/plan]] include the same **Maestro contract** sections (Role → Stop) for a uniform standard
 - [[skills/README]] — skills index by domain

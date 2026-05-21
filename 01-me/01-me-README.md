@@ -7,6 +7,7 @@ This folder holds identity files so AI assistants can work in line with Kobi's s
 | File | Purpose |
 |------|---------|
 | `01-me-identity` | Personal profile, business (Xsheva), current projects |
+| `01-me-business` | Revenue streams, business model, priorities |
 | `01-me-writing` | Writing tone, language, and formatting preferences |
 | `01-me-tools` | Tech stack, tools, and workflow preferences |
 | `01-me-ai-preferences` | How AI should respond, ask, and proceed |

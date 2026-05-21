@@ -6,6 +6,7 @@
 
 | Brief | Docs Index | Path |
 |------|-------------|------|
+| [[project.maestro]] | — | *this vault* (`Maestro`) — invariants: [[maestro/engineering-invariants]] |
 | [[project.casino-funnels]] | — | `~/.gemini/antigravity/projects/casino-funnels` |
 | [[project.cms]] | [[cms/README]] | `~/.gemini/antigravity/projects/cms` |
 | [[project.gold-ira-quiz]] | — | `~/.gemini/antigravity/projects/gold-ira-quiz-next` |

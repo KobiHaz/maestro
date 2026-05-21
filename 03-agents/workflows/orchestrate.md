@@ -16,6 +16,42 @@ You are now in **ORCHESTRATION MODE**. Your task: coordinate specialized agents 
 - **After:** synthesis → continue per plan (usually **`/execute`** or another coordination round). Minimum **3 distinct agents** — otherwise it is not orchestration.
 - **Staffing:** every agent from [[agent-routing]] and per plan staffing.
 
+---
+
+## Coordination Mode: Subagents vs Agent Teams
+
+Two modes available. Choose based on whether agents need to talk to each other.
+
+| Mode | When | How |
+|------|------|-----|
+| **Subagents** (default) | Agents work independently, results synthesized by orchestrator | Agent tool — agents report back sequentially |
+| **Agent Teams** | Agents need to share findings, debate, or coordinate in real time | `CLAUDE_CODE_EXPERIMENTAL_AGENT_TEAMS=1` — teammates message each other directly |
+
+### Use Agent Teams when:
+- **Competing hypotheses** — multiple agents investigating different root causes, actively trying to disprove each other
+- **Comprehensive audits** — security-auditor, explorer-agent, and performance-optimizer running truly in parallel and sharing discoveries as they find them
+- **Cross-domain features** — frontend, backend, and test-engineer need to coordinate on shared interfaces in real time
+- **Research with debate** — 3+ perspectives that need to challenge each other before consensus
+
+### How to spawn an Agent Team (example prompt to the lead)
+```
+Create an agent team for this task. Spawn three teammates:
+- security-auditor: audit the auth module for vulnerabilities
+- explorer-agent: map the full codebase architecture and dependencies
+- backend-specialist: review the API layer for security and performance
+
+Have them share findings with each other as they discover issues and reach a consensus report.
+```
+
+**Available user-scope teammate definitions** (`~/.claude/agents/`):
+`security-auditor` · `frontend-specialist` · `backend-specialist` · `explorer-agent` · `test-engineer`
+
+**Feature flag:** already enabled vault-wide via `~/.claude/settings.json` (`CLAUDE_CODE_EXPERIMENTAL_AGENT_TEAMS=1`).
+
+**Token cost:** Agent Teams use significantly more tokens — each teammate is a full Claude session. Reserve for scenarios where inter-agent communication genuinely changes the outcome.
+
+---
+
 ## Task to Orchestrate
 $ARGUMENTS
 

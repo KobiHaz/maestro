@@ -2,7 +2,13 @@
 
 Markdown playbooks and optional scripts under `03-agents/skills/`. Load by path when prompting agents in Cursor or reading in Obsidian. For Cursor-only auto-injected skills, see the table in [[../README]] (*Vault skills vs Cursor skills*).
 
-**Top-level folders** (35 + `skill-template.md` at this level):
+**Top-level folders** (36 + `skill-template.md` at this level):
+
+## Personal / career
+
+| Folder | Notes |
+|--------|--------|
+| `cv-builder/` | Tailored one-page PDF CV from job description. JSON → ReportLab PDF, orange two-column design. |
 
 ## Planning, process, agents
 
@@ -42,6 +48,7 @@ Markdown playbooks and optional scripts under `03-agents/skills/`. Load by path 
 | Folder | Notes |
 |--------|--------|
 | `vulnerability-scanner/` | `security_scan.py`, checklists |
+| *(workflow)* | **Invariant Sentinel** — `../workflows/invariant-sentinel.md` + template `05-templates/engineering-invariants.md` |
 | `red-team-tactics/` | Offensive mindset |
 | `code-review-checklist/` | Solid, security, quality |
 | `clean-code/` | Style |

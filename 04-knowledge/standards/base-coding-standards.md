@@ -3,7 +3,7 @@
 > **Applies:** All projects. Project-specific standards extend this base.
 > **Source:** V2 cleaned & expanded coding standards.
 
-Project standards (e.g. `hadaryaCRM-standards.md`) add project-specific rules only. Load both: base + project.
+Project standards (e.g. `crm-standards.md`) add project-specific rules only. Load both: base + project.
 
 **חוק:** אף פרויקט לא דורס את הבסיס. אם קוד בפרויקט לא עומד — משנים את הקוד, לא את החוקים.
 

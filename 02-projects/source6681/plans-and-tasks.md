@@ -1,8 +1,9 @@
 ---
-project: source6681
+
+## project: source6681
+
 type: plans-and-tasks
 updated: 2026-03-11
----
 
 # source6681 — תוכניות ומשימות
 

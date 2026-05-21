@@ -31,7 +31,7 @@ Main instruction file (read automatically when working with this vault).
 
 ## Agent Protocol
 
-- **New idea / feature / change** — Start with specification: `03-agents/workflows/brainstorm.md` (**`/brainstorm`** + CTO persona in that file). **PRD** (`/prd`) and **`/plan`** — `03-agents/workflows/plan.md` (PRD section + task planning). Then implement or run **`/execute`** per plan.
+- **New idea / feature / change** — Start with specification: `03-agents/workflows/brainstorm.md` (**`/brainstorm`** + CTO persona in that file). **If you @-mention that file for a new idea/feature, follow the full cycle defined there** (not brainstorm-only): **PRD** (`/prd`) and **`/plan`** — `03-agents/workflows/plan.md` (PRD section + task planning), then **`/execute`**, then test / document / review / finishing-branch per `03-agents/agent-routing.md` unless the user explicitly asked for exploration only.
 - **Before every task** — Read 01-me (identity, business context)
 - **Before every task** — Read `03-agents/agent-routing.md` and invoke the matching agent proactively (do not wait for user to tag)
 - **Before writing content** — Read 01-me/01-me-writing (tone, style)
