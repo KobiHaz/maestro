@@ -42,7 +42,13 @@ pass "INV-MAESTRO-004 invariant-sentinel frontmatter name"
 
 # INV-MAESTRO-005 — PEM / private key material in tracked content
 # Match common PEM headers only (avoid matching the word "private" in prose loosely).
-if git grep -nE 'BEGIN (RSA |EC |OPENSSH )?PRIVATE KEY-----|BEGIN PRIVATE KEY-----' -- . >/tmp/inv-pem.txt 2>/dev/null && [[ -s /tmp/inv-pem.txt ]]; then
+# Exclude this script and docs files that legitimately reference the pattern.
+if git grep -nE 'BEGIN (RSA |EC |OPENSSH )?PRIVATE KEY-----|BEGIN PRIVATE KEY-----' \
+    -- . \
+    ':!scripts/invariants-check.sh' \
+    ':!02-projects/maestro/engineering-invariants.md' \
+    ':!05-templates/engineering-invariants.md' \
+    >/tmp/inv-pem.txt 2>/dev/null && [[ -s /tmp/inv-pem.txt ]]; then
   cat /tmp/inv-pem.txt >&2
   fail "INV-MAESTRO-005 PEM private key block detected in tracked files"
 fi
